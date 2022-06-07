@@ -72,7 +72,8 @@ Key: [X] = Feature implemented  [ ] = Planned
 [X] Expose the entire Minestom API via Python
 [X] Provide a basic working demo sample
 [ ] GraalPython support (speed/performance boost)
-[ ] Bedrock client support via Geyser (https://geysermc.org/) so any Minecraft client can connect, right out of the box
+[ ] Bedrock client support via Geyser (https://geysermc.org/) 
+so any Minecraft client can connect, right out of the box
 
 Many more example scripts for common features, such as:
 
@@ -112,3 +113,7 @@ Many more example scripts for common features, such as:
     > Another thing to note is that Python performance on the JVM is advancing fairly nicely - it's likely that Python will gain considerable speed improvements in time.  For example it's been found that Javascript (a language as dynamic as Python) performance on GraalVM is [at times faster than Java](https://www.youtube.com/watch?v=GmxXgUkOOdw), with GraalPython being built on the same technology!
     >
     > On this topic, a great read is: [premature optimization is the root of all evil !](https://stackify.com/premature-optimization-evil/)
+
+## Credits
+
+Special thanks to all on the Minestom discord for answering my silly questions! I can be found lurking there often (look for stu)
