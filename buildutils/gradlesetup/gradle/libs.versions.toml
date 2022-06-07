@@ -1,0 +1,10 @@
+metadata.format.version = "1.1"
+
+[versions]
+
+# Demo
+jNoise = "b93008e35e"
+
+[libraries]
+# Demo
+jNoise = { group = "com.github.Articdive.JNoise", name = "jnoise-pipeline", version.ref = "jNoise" }
