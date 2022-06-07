@@ -1,3 +1,7 @@
+
+# This is mostly a port of 'demo' Java app in the Minestom source tree. 
+# Some features added - many removed!
+
 from net.minestom.server import MinecraftServer
 from net.minestom.server.instance import InstanceManager
 from net.minestom.server.instance import InstanceContainer

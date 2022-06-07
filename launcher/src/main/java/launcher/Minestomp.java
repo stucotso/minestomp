@@ -5,6 +5,12 @@ import java.util.Properties;
 
 import org.python.util.PythonInterpreter;
 
+/*
+ * This is mostly needed to setup the Pythonpath so
+ * Jython behaves more consistently.  Working without
+ * this Java launcher (ie using 'jython' from command line)
+ * seems to crash with Minestom JARs for some reason.
+ */
 public class Minestomp {
     public static void main(String[] args) {        
         Properties props = new Properties();

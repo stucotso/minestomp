@@ -1,3 +1,6 @@
+# This file mostly a placeholder for now. The idea here is for
+# Pythonic world generation helpers to live here!
+
 from de.articdive.jnoise.generators.noise_parameters.interpolation import Interpolation
 from de.articdive.jnoise.generators.noisegen.opensimplex import FastSimplexNoiseGenerator
 from de.articdive.jnoise.generators.noisegen.perlin import PerlinNoiseGenerator
@@ -27,15 +30,12 @@ class TestGen (Generator):
 
     def getHeight(self, x, z):
         preHeight = (TestGen.jNoise.evaluateNoise(x / 44.0, z / 44.0) + 1.0) / 2.0
-        #print preHeight,
-        #return int((( preHeight * 6 if preHeight > 0 else preHeight * 4.0) + 64.0))
-        #return int( preHeight * 100.0 if preHeight > 0.5 else preHeight * 50.0)
         return int(preHeight * preHeight * preHeight * 100.0)
 
     def generate(self, unit):
         water_height = 10
         start = unit.absoluteStart()
-        #print "gen:", start
+
         for x in range(Chunk.CHUNK_SIZE_X):
             for z in range(Chunk.CHUNK_SIZE_Z):
                 pos=None
@@ -54,8 +54,6 @@ class TestGen (Generator):
                 
                 if (pos.y() < water_height): # Water
                     unit.modifier().fill(pos, posp1.withY(water_height), block_type("water"))
-                    #unit.modifier().fill(pos.withY(0), posp1, block_type("air"))
-                    #return
                 else: # Regular terrain                    
                     unit.modifier().fill(pos.withY(pos.y() - 1), posp1, block_type("grass_block"))          
                 
